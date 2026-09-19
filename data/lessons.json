@@ -1,0 +1,33 @@
+{
+  "status": "minh_hoa_chua_xac_thuc_sgk",
+  "notice": "Dữ liệu minh họa để thử luồng ứng dụng. Giáo viên cần thay bằng nội dung và nguồn SGK KHTN 8 của bộ sách đang dùng.",
+  "lessons": [
+    {
+      "id": "demo-do-the-tich",
+      "title": "Minh họa: Đo thể tích chất lỏng",
+      "source": "Dữ liệu minh họa; chưa xác thực SGK",
+      "equipment_aliases": ["ống đong", "ong dong", "graduated cylinder", "measuring cylinder", "beaker", "cốc thủy tinh", "coc thuy tinh"],
+      "objective": "Quan sát và đọc thể tích chất lỏng bằng dụng cụ phù hợp.",
+      "steps": ["Đặt dụng cụ trên mặt phẳng vững chắc.", "Quan sát mức chất lỏng ngang tầm mắt.", "Ghi lại số đo và trao đổi với giáo viên."],
+      "safety": ["Cầm đồ thủy tinh nhẹ nhàng; báo giáo viên nếu bị nứt hoặc vỡ.", "Chỉ thao tác với chất lỏng do giáo viên cung cấp."]
+    },
+    {
+      "id": "demo-quan-sat",
+      "title": "Minh họa: Quan sát mẫu vật bằng kính lúp",
+      "source": "Dữ liệu minh họa; chưa xác thực SGK",
+      "equipment_aliases": ["kính lúp", "kinh lup", "magnifying glass", "magnifier"],
+      "objective": "Quan sát đặc điểm của mẫu vật và ghi nhận kết quả.",
+      "steps": ["Đặt mẫu vật ở vị trí đủ sáng.", "Điều chỉnh khoảng cách kính lúp để nhìn rõ.", "Ghi lại đặc điểm quan sát được."],
+      "safety": ["Không dùng kính lúp để nhìn trực tiếp vào Mặt Trời.", "Giữ dụng cụ sạch và cất đúng nơi sau khi dùng."]
+    },
+    {
+      "id": "demo-thi-nghiem-nhiet",
+      "title": "Minh họa: Quan sát sự thay đổi nhiệt độ",
+      "source": "Dữ liệu minh họa; chưa xác thực SGK",
+      "equipment_aliases": ["nhiệt kế", "nhiet ke", "thermometer", "đèn cồn", "den con", "alcohol lamp"],
+      "objective": "Theo dõi và ghi lại sự thay đổi nhiệt độ trong một hoạt động do giáo viên hướng dẫn.",
+      "steps": ["Nghe giáo viên hướng dẫn bố trí dụng cụ.", "Quan sát và đọc nhiệt độ ở các thời điểm được yêu cầu.", "Ghi kết quả, sau đó chờ giáo viên hướng dẫn thu dọn."],
+      "safety": ["Không tự ý châm lửa hoặc chạm vào dụng cụ đang nóng.", "Thực hiện dưới sự hướng dẫn trực tiếp của giáo viên."]
+    }
+  ]
+}
