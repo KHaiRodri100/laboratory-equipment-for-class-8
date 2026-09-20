@@ -6,7 +6,7 @@
       "id": "demo-do-the-tich",
       "title": "Minh họa: Đo thể tích chất lỏng",
       "source": "Dữ liệu minh họa; chưa xác thực SGK",
-      "equipment_aliases": ["ống đong", "ong dong", "graduated cylinder", "measuring cylinder", "beaker", "cốc thủy tinh", "coc thuy tinh"],
+      "equipment_aliases": ["ống đong", "ong dong", "graduated cylinder", "measuring cylinder", "measuring tube", "beaker", "graduated beaker", "cốc có chia độ", "Erlen", "bình tam giác", "cốc thủy tinh", "coc thuy tinh", "test tube", "ống nghiệm", "rack for test tubes", "giá ống nghiệm", "pipet"],
       "objective": "Quan sát và đọc thể tích chất lỏng bằng dụng cụ phù hợp.",
       "steps": ["Đặt dụng cụ trên mặt phẳng vững chắc.", "Quan sát mức chất lỏng ngang tầm mắt.", "Ghi lại số đo và trao đổi với giáo viên."],
       "safety": ["Cầm đồ thủy tinh nhẹ nhàng; báo giáo viên nếu bị nứt hoặc vỡ.", "Chỉ thao tác với chất lỏng do giáo viên cung cấp."]
@@ -21,10 +21,19 @@
       "safety": ["Không dùng kính lúp để nhìn trực tiếp vào Mặt Trời.", "Giữ dụng cụ sạch và cất đúng nơi sau khi dùng."]
     },
     {
+      "id": "demo-kinh-hien-vi",
+      "title": "Minh họa: Quan sát mẫu vật bằng kính hiển vi",
+      "source": "Dữ liệu minh họa; chưa xác thực SGK",
+      "equipment_aliases": ["kính hiển vi", "kinh hien vi", "microscope"],
+      "objective": "Quan sát đặc điểm của mẫu vật ở độ phóng đại phù hợp và ghi nhận kết quả.",
+      "steps": ["Đặt tiêu bản lên bàn kính và cố định đúng cách.", "Điều chỉnh ánh sáng và vật kính từ độ phóng đại thấp.", "Lấy nét từ từ, quan sát mẫu vật và ghi lại kết quả."],
+      "safety": ["Không chạm vật kính vào tiêu bản khi điều chỉnh lấy nét.", "Giữ kính hiển vi bằng hai tay khi di chuyển và tắt đèn sau khi dùng."]
+    },
+    {
       "id": "demo-thi-nghiem-nhiet",
       "title": "Minh họa: Quan sát sự thay đổi nhiệt độ",
       "source": "Dữ liệu minh họa; chưa xác thực SGK",
-      "equipment_aliases": ["nhiệt kế", "nhiet ke", "thermometer", "đèn cồn", "den con", "alcohol lamp"],
+      "equipment_aliases": ["nhiệt kế", "nhiet ke", "thermometer", "đèn cồn", "den con", "alcohol lamp", "iron test stand", "giá thí nghiệm", "test tube clamp", "kẹp ống nghiệm", "minor chemicals", "hóa chất", "gloves", "găng tay", "labcoat", "áo blouse"],
       "objective": "Theo dõi và ghi lại sự thay đổi nhiệt độ trong một hoạt động do giáo viên hướng dẫn.",
       "steps": ["Nghe giáo viên hướng dẫn bố trí dụng cụ.", "Quan sát và đọc nhiệt độ ở các thời điểm được yêu cầu.", "Ghi kết quả, sau đó chờ giáo viên hướng dẫn thu dọn."],
       "safety": ["Không tự ý châm lửa hoặc chạm vào dụng cụ đang nóng.", "Thực hiện dưới sự hướng dẫn trực tiếp của giáo viên."]

@@ -18,10 +18,41 @@ LESSONS = json.loads((ROOT / "data" / "lessons.json").read_text(encoding="utf-8"
 app = FastAPI(title="Phòng thực hành KHTN 8")
 app.mount("/static", StaticFiles(directory=WEB), name="static")
 
+LABEL_TRANSLATIONS = {
+    "alcohol lamp": "đèn cồn",
+    "erlen": "bình tam giác",
+    "iron test stand": "giá thí nghiệm",
+    "joulemeter": "đồng hồ đo năng lượng",
+    "measuring tube": "ống đong",
+    "minor chemicals": "hóa chất",
+    "pipet": "pipet",
+    "rack for test tubes": "giá ống nghiệm",
+    "test tube": "ống nghiệm",
+    "test tube clamp": "kẹp ống nghiệm",
+    "variable resistor": "biến trở",
+    "voltmeter": "vôn kế",
+    "ammeter": "ampe kế",
+    "battery": "pin",
+    "fuse": "cầu chì",
+    "gloves": "găng tay",
+    "goggles": "kính bảo hộ",
+    "graduated beaker": "cốc có chia độ",
+    "labcoat": "áo blouse",
+    "magnifying glass": "kính lúp",
+    "microscope": "kính hiển vi",
+    "photogate": "cổng quang điện",
+    "resistor": "điện trở",
+    "switch": "công tắc",
+}
+
 
 def normalized(value: str) -> str:
     value = unicodedata.normalize("NFD", value.lower())
     return "".join(c for c in value if unicodedata.category(c) != "Mn").replace("đ", "d").strip()
+
+
+def translated_label(label: str) -> str:
+    return LABEL_TRANSLATIONS.get(normalized(label), label)
 
 
 @lru_cache(maxsize=1)
@@ -80,7 +111,7 @@ def lesson_suggestion(labels: list[str]) -> dict:
             + json.dumps({"detected_labels": labels, "candidates": candidates}, ensure_ascii=False)
         )
         response = client.models.generate_content(
-            model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+            model=os.getenv("GEMINI_MODEL", "gemini-3.6-flash"),
             contents=prompt,
             config=types.GenerateContentConfig(response_mime_type="application/json"),
         )
@@ -134,9 +165,13 @@ async def analyze(file: UploadFile = File(...)):
         if result.boxes is not None:
             for box in result.boxes:
                 class_id = int(box.cls.item())
+                raw_label = str(result.names[class_id])
+                confidence = float(box.conf.item())
+                if normalized(raw_label) == "goggles" and confidence < float(os.getenv("GOGGLES_MIN_CONFIDENCE", "0.55")):
+                    continue
                 detections.append({
-                    "label": str(result.names[class_id]),
-                    "confidence": round(float(box.conf.item()), 3),
+                    "label": translated_label(raw_label),
+                    "confidence": round(confidence, 3),
                     "box": [round(float(x), 1) for x in box.xyxy[0].tolist()],
                 })
     except Exception as exc:
